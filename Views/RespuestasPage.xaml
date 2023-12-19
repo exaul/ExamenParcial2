@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ExamenParcial2.Views.RespuestasPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="RespuestasPage">
+    <VerticalStackLayout>
+        <StackLayout>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Ingresa las respuestas a las preguntas:"
+                VerticalOptions="CenterAndExpand" />
+
+            <StackLayout>
+                <Label Text="¿Cuánto es 2 + 2?" />
+                <Entry
+                    HorizontalOptions="CenterAndExpand"
+                    Keyboard="Numeric"
+                    Text="{Binding RespuestaPregunta1}"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="¿Cuál es el valor de pi?" />
+                <Entry
+                    HorizontalOptions="CenterAndExpand"
+                    Keyboard="Numeric"
+                    Text="{Binding RespuestaPregunta2, StringFormat='{0:F4}'}"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="¿Cuánto es 10 - 5?" />
+                <Entry
+                    HorizontalOptions="CenterAndExpand"
+                    Keyboard="Numeric"
+                    Text="{Binding RespuestaPregunta3}"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <Button
+                Clicked="GuardarRespuestas_Clicked"
+                HorizontalOptions="CenterAndExpand"
+                Text="Guardar Respuestas"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
